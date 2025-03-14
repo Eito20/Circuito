@@ -1,0 +1,60 @@
+<circuit name="main">
+  <a name="circuit" val="main"/>
+  <a name="clabel" val=""/>
+  <a name="clabelup" val="east"/>
+  <a name="clabelfont" val="SansSerif plain 12"/>
+  
+  <!-- Entradas -->
+  <comp lib="0" loc="(100,100)" name="Pin">
+    <a name="facing" val="south"/>
+    <a name="tristate" val="false"/>
+    <a name="label" val="A"/>
+    <a name="labelloc" val="north"/>
+  </comp>
+  <comp lib="0" loc="(150,100)" name="Pin">
+    <a name="facing" val="south"/>
+    <a name="tristate" val="false"/>
+    <a name="label" val="B"/>
+    <a name="labelloc" val="north"/>
+  </comp>
+  <comp lib="0" loc="(200,100)" name="Pin">
+    <a name="facing" val="south"/>
+    <a name="tristate" val="false"/>
+    <a name="label" val="C"/>
+    <a name="labelloc" val="north"/>
+  </comp>
+  <comp lib="0" loc="(250,100)" name="Pin">
+    <a name="facing" val="south"/>
+    <a name="tristate" val="false"/>
+    <a name="label" val="D"/>
+    <a name="labelloc" val="north"/>
+  </comp>
+  
+  <!-- Portas OR -->
+  <comp lib="1" loc="(175,150)" name="OR Gate">
+    <a name="inputs" val="2"/>
+  </comp>
+  <comp lib="1" loc="(225,150)" name="OR Gate">
+    <a name="inputs" val="2"/>
+  </comp>
+  <comp lib="1" loc="(200,200)" name="OR Gate">
+    <a name="inputs" val="2"/>
+  </comp>
+  
+  <!-- Saída -->
+  <comp lib="0" loc="(200,250)" name="Pin">
+    <a name="facing" val="north"/>
+    <a name="output" val="true"/>
+    <a name="label" val="S"/>
+    <a name="labelloc" val="east"/>
+  </comp>
+  
+  <!-- Conexões -->
+  <wire from="(100,110)" to="(175,150)"/>
+  <wire from="(150,110)" to="(175,150)"/>
+  <wire from="(200,110)" to="(225,150)"/>
+  <wire from="(250,110)" to="(225,150)"/>
+  <wire from="(175,170)" to="(200,200)"/>
+  <wire from="(225,170)" to="(200,200)"/>
+  <wire from="(200,220)" to="(200,250)"/>
+</circuit>
